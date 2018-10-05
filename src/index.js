@@ -12,7 +12,8 @@ class Provider extends Component {
       right,
       top,
       topLeft,
-      topRight
+      topRight,
+      ...passThroughProps
     } = this.props
 
     return (
@@ -21,7 +22,7 @@ class Provider extends Component {
 
         {topLeft ? (
           <div style={{ position: 'absolute', top: margin, left: margin }}>
-            {topLeft}
+            {topLeft(passThroughProps)}
           </div>
         ) : null}
 
@@ -34,13 +35,13 @@ class Provider extends Component {
               transform: 'translateX(-50%)'
             }}
           >
-            {top}
+            {top(passThroughProps)}
           </div>
         ) : null}
 
         {topRight ? (
           <div style={{ position: 'absolute', top: margin, right: margin }}>
-            {topRight}
+            {topRight(passThroughProps)}
           </div>
         ) : null}
 
@@ -53,13 +54,13 @@ class Provider extends Component {
               transform: 'translateY(-50%)'
             }}
           >
-            {right}
+            {right(passThroughProps)}
           </div>
         ) : null}
 
         {bottomRight ? (
           <div style={{ position: 'absolute', bottom: margin, right: margin }}>
-            {bottomRight}
+            {bottomRight(passThroughProps)}
           </div>
         ) : null}
 
@@ -72,13 +73,13 @@ class Provider extends Component {
               transform: 'translateX(-50%)'
             }}
           >
-            {bottom}
+            {bottom(passThroughProps)}
           </div>
         ) : null}
 
         {bottomLeft ? (
           <div style={{ position: 'absolute', bottom: margin, left: margin }}>
-            {bottomLeft}
+            {bottomLeft(passThroughProps)}
           </div>
         ) : null}
 
@@ -91,7 +92,7 @@ class Provider extends Component {
               transform: 'translateY(-50%)'
             }}
           >
-            {left}
+            {left(passThroughProps)}
           </div>
         ) : null}
       </div>
