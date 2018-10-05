@@ -4,7 +4,7 @@ This is a Provider component that will enable you to put UI elements easily arou
 
 ```jsx
 <Provider
-  bottomRight={<a href="https://twitter.com/kyleshevlin">@kyleshevlin</a>}
+  bottomRight={() => <a href="https://twitter.com/kyleshevlin">@kyleshevlin</a>}
 />
 ```
 
@@ -20,6 +20,16 @@ The following props are all associated with the screen position they represent:
 - `bottom`
 - `bottomLeft`
 - `left`
+
+Each one is a render prop, receiving the props passed through from the mdx-deck Provider to this one.
+
+| Prop   | Type     | Description                                                    |
+| ------ | -------- | -------------------------------------------------------------- |
+| index  | `Number` | The current slide index                                        |
+| length | `Number` | The number of slides in the deck                               |
+| mode   | `String` | The current mode (one of 'NORMAL', 'PRESENTER', or 'OVERVIEW') |
+| notes  | `Object` | Custom speaker notes for all slides                            |
+| step   | `Number` | The current visible step in an Appear component                |
 
 There are additional props:
 
