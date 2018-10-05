@@ -1,0 +1,28 @@
+{
+  "name": "mdx-deck-edges",
+  "version": "1.0.0",
+  "description": "A Provider component for mdx-deck that allows you to easily position UI around the edges of your slide deck",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/kyleshevlin/mdx-deck-edges.git"
+  },
+  "keywords": [
+    "mdx-deck",
+    "Provider",
+    "component"
+  ],
+  "author": "Kyle Shevlin <kyle.a.shevlin@gmail.com> (http://kyleshevlin.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kyleshevlin/mdx-deck-edges/issues"
+  },
+  "homepage": "https://github.com/kyleshevlin/mdx-deck-edges#readme",
+  "devDependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2"
+  }
+}
