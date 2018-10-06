@@ -2,9 +2,16 @@
   "name": "mdx-deck-edges",
   "version": "1.0.0",
   "description": "A Provider component for mdx-deck that allows you to easily position UI around the edges of your slide deck",
-  "main": "index.js",
+  "main": "dist/main.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "jest"
+    "prebuild": "rimraf dist/",
+    "build": "cross-env NODE_ENV=production webpack -p --progress",
+    "lint": "eslint ./src ./__tests__",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -22,7 +29,29 @@
   },
   "homepage": "https://github.com/kyleshevlin/mdx-deck-edges#readme",
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.18",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.6.1",
+    "eslint-plugin-jest": "^21.24.1",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
+    "jest-dom": "^2.0.2",
     "prop-types": "^15.6.2",
-    "react": "^16.5.2"
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-testing-library": "^5.2.0",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "peerDependencies": {
+    "react": "*"
   }
 }
