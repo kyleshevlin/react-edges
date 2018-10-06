@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Provider extends Component {
   render() {
@@ -98,6 +99,19 @@ class Provider extends Component {
       </div>
     )
   }
+}
+
+Provider.propTypes = {
+  bottom: PropTypes.func,
+  bottomLeft: PropTypes.func,
+  bottomRight: PropTypes.func,
+  children: PropTypes.node,
+  left: PropTypes.func,
+  margin: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  right: PropTypes.func,
+  top: PropTypes.func,
+  topLeft: PropTypes.func,
+  topRight: PropTypes.func
 }
 
 Provider.defaultProps = {
