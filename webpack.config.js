@@ -1,14 +1,12 @@
 const webpack = require('webpack')
-const { join } = require('path')
-
-const context = join(__dirname, 'src')
+const { resolve } = require('path')
 
 module.exports = {
-  context,
-  entry: './index.js',
+  entry: './src/index.js',
   output: {
-    path: join(__dirname, 'dist'),
-    library: 'mdx-deck-edges',
+    path: resolve(__dirname, 'dist'),
+    filename: 'mdx-deck-edges.js',
+    library: 'mdxDeckEdges',
     libraryTarget: 'umd'
   },
   devtool: 'source-map',
@@ -17,7 +15,7 @@ module.exports = {
       {
         test: /\.js$/,
         use: 'babel-loader',
-        include: context
+        include: resolve(__dirname, 'src')
       }
     ]
   },
