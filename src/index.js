@@ -70,7 +70,7 @@ class Provider extends Component {
             style={{
               position: 'absolute',
               bottom: margin,
-              left: margin,
+              left: '50%',
               transform: 'translateX(-50%)'
             }}
           >
