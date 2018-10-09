@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class Provider extends Component {
+class Edges extends Component {
   render() {
     const {
       bottom,
@@ -101,7 +101,7 @@ class Provider extends Component {
   }
 }
 
-Provider.propTypes = {
+Edges.propTypes = {
   bottom: PropTypes.func,
   bottomLeft: PropTypes.func,
   bottomRight: PropTypes.func,
@@ -114,8 +114,8 @@ Provider.propTypes = {
   topRight: PropTypes.func
 }
 
-Provider.defaultProps = {
+Edges.defaultProps = {
   margin: '1em'
 }
 
-export default Provider
+export default Edges
