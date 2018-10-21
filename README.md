@@ -1,14 +1,36 @@
-# mdx-deck-edges
+# react-edges
 
-This is a Provider component that will enable you to put UI elements easily around the edges of your mdx-deck deck.
+Let me be up front. This is a simple component. But I didn't want to write it twice.
 
-```jsx
-<Provider
-  bottomRight={() => <a href="https://twitter.com/kyleshevlin">@kyleshevlin</a>}
-/>
+This component allows you to easily add markup around the _edges_ of the viewport. My use case? I needed a component that would allow me to add my [Twitter handle](https://twitter.com/kyleshevlin) to each of my slides in an [mdx-deck](https://github.com/jxnblk/mdx-deck) presentation. You can create a custom `Provider` component to an mdx-deck theme, and this worked perfectly.
+
+## Installation
+
+```bash
+npm install react-edges
 ```
 
-### Props
+## Usage
+
+`Edges` has eight render props, one for each corner and side, that each expose whatever props are passed through. Thus, you have access to anything the parent component provided `Edges`
+
+For example, in a mdx-deck, a Provider component is given the length of the slides and the current index. We can display something like a Twitter handle in one corner, and use these passed through props to create a slide counter in another. Like so:
+
+```javascript
+import Edges from 'react-edges'
+
+const Provider = props => (
+  <Edges
+    {...props}
+    bottomLeft={({ index, length }) => (
+      <div>{`${index + 1} of ${length}`}</div>
+    )}
+    bottomRight={() => <a href="https://twitter.com/kyleshevlin">@kyleshevlin</a>}
+  >
+)
+```
+
+## Props
 
 The following props are all associated with the screen position they represent:
 
@@ -21,16 +43,6 @@ The following props are all associated with the screen position they represent:
 - `bottomLeft`
 - `left`
 
-Each one is a render prop, receiving the props passed through from the mdx-deck Provider to this one.
-
-| Prop   | Type     | Description                                                    |
-| ------ | -------- | -------------------------------------------------------------- |
-| index  | `Number` | The current slide index                                        |
-| length | `Number` | The number of slides in the deck                               |
-| mode   | `String` | The current mode (one of 'NORMAL', 'PRESENTER', or 'OVERVIEW') |
-| notes  | `Object` | Custom speaker notes for all slides                            |
-| step   | `Number` | The current visible step in an Appear component                |
-
-There are additional props:
+Each one is a render prop, receiving any props passed to Edges that are not one of these positional props, or the `margin` prop discussed below.
 
 - `margin`: Defaults to `1em` - Represents the distance from the edge of the deck to the edge of the surrounding box for that position.

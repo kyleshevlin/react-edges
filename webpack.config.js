@@ -5,8 +5,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: resolve(__dirname, 'dist'),
-    filename: 'mdx-deck-edges.js',
-    library: 'mdxDeckEdges',
+    filename: 'react-edges.js',
+    library: 'reactEdges',
     libraryTarget: 'umd'
   },
   devtool: 'source-map',

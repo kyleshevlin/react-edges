@@ -1,8 +1,8 @@
 {
-  "name": "mdx-deck-edges",
+  "name": "react-edges",
   "version": "1.0.0",
-  "description": "A Provider component for mdx-deck that allows you to easily position UI around the edges of your slide deck",
-  "main": "dist/mdx-deck-edges.js",
+  "description": "A React component that allows you to easily put content around the edges of the viewport",
+  "main": "dist/react-edges.js",
   "files": [
     "dist"
   ],
@@ -15,19 +15,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com/kyleshevlin/mdx-deck-edges.git"
+    "url": "git@github.com/kyleshevlin/react-edges.git"
   },
   "keywords": [
-    "mdx-deck",
-    "Provider",
+    "React",
     "component"
   ],
   "author": "Kyle Shevlin <kyle.a.shevlin@gmail.com> (http://kyleshevlin.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kyleshevlin/mdx-deck-edges/issues"
+    "url": "https://github.com/kyleshevlin/react-edges/issues"
   },
-  "homepage": "https://github.com/kyleshevlin/mdx-deck-edges#readme",
+  "homepage": "https://github.com/kyleshevlin/react-edges#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
