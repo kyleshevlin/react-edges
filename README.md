@@ -12,7 +12,7 @@ npm install react-edges
 
 ## Usage
 
-`Edges` has eight render props, one for each corner and side, that each expose whatever props are passed through. Thus, you have access to anything the parent component provided `Edges`
+`Edges` has eight render props, one for each corner and side, that each expose whatever props are passed through. Thus, you have access to anything the parent component provided `Edges`.
 
 For example, in a mdx-deck, a Provider component is given the length of the slides and the current index. We can display something like a Twitter handle in one corner, and use these passed through props to create a slide counter in another. Like so:
 
