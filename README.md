@@ -1,6 +1,6 @@
 # react-edges
 
-Let me be up front. This is a simple component. But I didn't want to write it twice.
+Let me be up front. This is a simple component anyone could write, but I didn't want to write it twice.
 
 This component allows you to easily add markup around the _edges_ of the viewport. My use case? I needed a component that would allow me to add my [Twitter handle](https://twitter.com/kyleshevlin) to each of my slides in an [mdx-deck](https://github.com/jxnblk/mdx-deck) presentation. You can create a custom `Provider` component to an mdx-deck theme, and this worked perfectly.
 
@@ -46,3 +46,7 @@ The following props are all associated with the screen position they represent:
 Each one is a render prop, receiving any props passed to Edges that are not one of these positional props, or the `margin` prop discussed below.
 
 - `margin`: Defaults to `1em` - Represents the distance from the edge of the deck to the edge of the surrounding box for that position.
+
+## License
+
+MIT. See LICENSE.md file.
