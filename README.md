@@ -43,9 +43,9 @@ The following props are all associated with the screen position they represent:
 - `bottomLeft`
 - `left`
 
-Each one is a render prop, receiving any props passed to Edges that are not one of these positional props, or the `margin` prop discussed below.
+Each one is a render prop, receiving any props passed to `Edges` that are not one of these positional props or the `margin` prop discussed below.
 
-- `margin`: Defaults to `1em` - Represents the distance from the edge of the deck to the edge of the surrounding box for that position.
+- `margin`: Defaults to `1em` - The distance from the edge of the viewport to the edge of the surrounding box for that position.
 
 ## License
 
