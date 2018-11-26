@@ -1,6 +1,6 @@
 {
   "name": "react-edges",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React component that allows you to easily put content around the edges of the viewport",
   "main": "dist/react-edges.js",
   "files": [
